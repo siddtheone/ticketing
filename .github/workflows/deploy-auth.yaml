@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'auth/**'
+      - "auth/**"
 
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: cd auth && docker build -t siddtheone/auth .
-      - run: docker login -u $DOCKER_USERNAME - p $DOCKER_UNAME
+      - run: docker login -u $DOCKER_USERNAME -p $DOCKER_UNAME
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_UNAME: ${{ secrets.DOCKER_UNAME }}
