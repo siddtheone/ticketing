@@ -6,10 +6,10 @@ deploy:
       - ./infra/k8s/*
       - ./infra/k8s-dev/*
 build:
-  # local:
-  #   push: false
-  googleCloudBuild:
-    projectId: ticketing-dev-347815
+  local:
+    push: false
+  # googleCloudBuild:
+  #   projectId: ticketing-dev-347815
   artifacts:
     - image: siddtheone/auth
       context: auth
